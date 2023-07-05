@@ -7,7 +7,7 @@ python project of implement ct-value
 
 csv檔案不能有行號(row), 第一行須為column name
 
-column name內不能包含斜線'/'
+column name內不能包含特殊字元ex: \ / ? " * | < >
 
 最後一個column name須為'label'
 
