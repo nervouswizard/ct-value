@@ -40,31 +40,32 @@ from ct_value.f2_score import score
 from ct_value.f3_putback import putback
 from ct_value.f4_sum import sum
 from ct_value.f5_sample import sample
-"""
-前處理資料格式：
-資料須為.csv檔案 名稱不限 有多個csv檔案也可以 但須放在同一資料夾底下
-資料建議放在data/1_preprocess
-csv檔案不能有行號(row), 第一行須為column name
-最後一個column name須為'label'
-與 label 直接相關的 column , 例如 'attack_cat' 或 'label-detail' 之類的 要在config.ini內設定
-sample 部分:
-所有採樣完的 csv 檔案 label 幾乎都是1:1
-採樣前假設 label A與label B 數量為6:4
-採樣label B 的所有資料
-將 label A 以隨機採樣方式採取至 A:B 為 1:1 -> random_data
-將 label A 以 column['sum'] 高到低採取至 A:B 為 1:1 -> top20_data
-top20_data 的 label A 的資料再增加一些沒採取到的 feature 分布 -> HQSC_data
-"""
+
 configreader = configparser.ConfigParser()
 configreader.read('config.ini', encoding='utf-8')
 config = dict(configreader.items('p-value'))
 del configreader
 config['label_column'] = list(config['label_column'].split(' '))
 config['log'] = bool(config['log'])
-try:
-    config['benign'] = float(config['benign'])
-except:
-    pass
+
+if config['label_type'] == 'float':
+    try:
+        config['benign'] = float(config['benign'])
+        config['malicious'] = float(config['malicious'])
+    except:
+        pass
+elif config['label_type'] == 'bool':
+    try:
+        config['benign'] = config['benign'].lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']
+        config['malicious'] = config['malicious'].lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']
+    except:
+        pass
+elif config['label_type'] == 'int':
+    try:
+        config['benign'] = int(config['benign'])
+        config['malicious'] = int(config['malicious'])
+    except:
+        pass
 
 if __name__=='__main__':
     if config['log'] == True:
