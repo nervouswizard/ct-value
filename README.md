@@ -9,6 +9,8 @@ csv檔案不能有行號(row), 第一行須為column name
 
 column name內不能包含特殊字元ex: \ / ? " * | < >
 
+建議可以換成 .
+
 最後一個column name須為'label'
 
 與 label 直接相關的 column , 例如 'attack_cat' 或 'label-detail' 之類的 要在config.ini內設定
