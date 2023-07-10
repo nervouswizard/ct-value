@@ -78,7 +78,7 @@ if __name__=='__main__':
     read_path = config['filepath']
     save_path = os.path.join('data', '2_score')
     os.makedirs(save_path, exist_ok=True)
-    score(read_path, save_path, config['label_column'], print)
+    score(read_path, save_path, config['benign'], config['label_column'], print)
 
     # f3_putback
     print('f3_putback')

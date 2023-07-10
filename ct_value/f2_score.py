@@ -4,12 +4,12 @@ import pandas as pd
 import numpy as np
 import os
 
-def score(read_path, save_path, label_column, print=print):
+def score(read_path, save_path, _benign, label_column, print=print):
     # 讀檔
     for i, filename in enumerate(os.listdir(read_path)):
         if not filename.endswith('.csv'): continue
         print(i, filename)
-        data = pd.read_csv(os.path.join(read_path, filename), nrows=1)
+        data = pd.read_csv(os.path.join(read_path, filename))
         column_list = data.columns.to_list()
 
         filename = filename.replace('.csv', '/')
@@ -32,8 +32,8 @@ def score(read_path, save_path, label_column, print=print):
             filename = filename.replace('.csv', '/')
 
             # 將不同的label拆分為不同的資料集
-            benign = data[data['label'] == 0]
-            malicious = data[data['label'] != 0]
+            benign = data[data['label'] == _benign]
+            malicious = data[data['label'] != _benign]
 
             # 某特徵c在label為benign/malicious出現的次數
             b += Counter(benign[column_list[c]])
