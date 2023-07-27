@@ -72,7 +72,7 @@ if __name__=='__main__':
         _print = print
         print = Logger.timestamped_print
         log_history(os.path.basename(__file__))
-    '''
+    
     # f2_score
     print('f2_score')
     read_path = config['filepath']
@@ -94,7 +94,7 @@ if __name__=='__main__':
     save_path = os.path.join('data', '4_sum')
     os.makedirs(save_path, exist_ok=True)
     sum(read_path, save_path, config['label_column'], config['sum_or_count01'], print)
-    '''
+    
     # f5_sample
     print('f5_sample')
     read_path_ct = os.path.join('data', '4_sum')
