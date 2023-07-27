@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os, sys
 from sklearn.preprocessing import MinMaxScaler
 
-def sample(read_path_ct, read_path_ori, save_path, label_column, benign, print=print):
+def sample(read_path_ct, read_path_ori, save_path, label_column, sum_or_count01, benign, print=print):
     # 讀CT值的csv檔案
     for i, filename in enumerate(os.listdir(read_path_ct)):
         if not filename.endswith('.csv'): continue
@@ -63,7 +63,13 @@ def sample(read_path_ct, read_path_ori, save_path, label_column, benign, print=p
         sample_data.to_csv(os.path.join(save_path, filename, 'CT_random_data.csv'), index=None)
 
         # 依照sum的大小來排序
-        sorted_idx = data.sort_values(by='sum', ascending=False).index
+        if sum_or_count01 == 'sum':
+            sorted_idx = data.sort_values(by='sum', ascending=False).index
+        elif sum_or_count01 == 'count01':
+            sorted_idx = data.sort_values(by='count_gt_0_1', ascending=False).index
+        else:
+            print('something wrong.please check config.ini :sum_or_count01')
+            return
         data = data.reindex(sorted_idx)
         ori_data = ori_data.reindex(sorted_idx)
 
@@ -93,7 +99,10 @@ def sample(read_path_ct, read_path_ori, save_path, label_column, benign, print=p
 
         # 分20個區，對每個 feature 紀錄每個區間內出現次數
         for col in data_top_18_percent.columns:
-            label_column.append('sum')
+            if sum_or_count01 == 'sum':
+                label_column.append('sum')
+            elif sum_or_count01 == 'count01':
+                label_column.append('count_gt_0_1')
             if col in label_column: continue
             additional_data = []
             col_data = data_top_18_percent[col].values

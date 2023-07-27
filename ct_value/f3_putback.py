@@ -25,14 +25,19 @@ def putback(read_path_data, read_path_pvalue, save_path, label_column, print=pri
 
             #將csv變成dict {'value': p-value}
             filename = filename.replace('.csv', '/')
+            weigthDataFilenameByColunm = os.path.join(weigthPath,filename+str(c)+'_'+col+'.csv')
+            weigthDF = pd.read_csv(weigthDataFilenameByColunm, header=0, low_memory=False, usecols=['value', 'count'])
+            wDict = weigthDF.to_dict(orient='list')
             pvalueDataFilenameByColunm = os.path.join(pvaluePath,filename+'b_'+str(c)+'_'+col+'.csv')
             pvalueDF = pd.read_csv(pvalueDataFilenameByColunm, header=0, low_memory=False)
             print('benign P-value Data Shape', pvalueDF.shape)
             tmpDitc = pvalueDF.to_dict(orient='list')
             bDict = dict()
-
             for i in range(len(tmpDitc['value'])):
-                bDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
+                if wDict['count'][i] <= 3:
+                    bDict[tmpDitc['value'][i]] = 0.5
+                else:
+                    bDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
 
             #將csv變成dict {'value': p-value}
             pvalueDataFilenameByColunm = os.path.join(pvaluePath,filename+'m_'+str(c)+'_'+col+'.csv')
@@ -42,9 +47,13 @@ def putback(read_path_data, read_path_pvalue, save_path, label_column, print=pri
             mDict = dict()
 
             for i in range(len(tmpDitc['value'])):
-                mDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
+                if wDict['count'][i] <= 3:
+                    bDict[tmpDitc['value'][i]] = 0.5
+                else:
+                    mDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
 
             #將csv變成dict {'value': weigth}
+            
             weigthDataFilenameByColunm = os.path.join(weigthPath,filename+str(c)+'_'+col+'.csv')
             weigthDF = pd.read_csv(weigthDataFilenameByColunm, header=0, low_memory=False, usecols=['value', 'weight'])
             print('weight P-value Data Shape', weigthDF.shape)
