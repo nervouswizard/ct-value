@@ -11,8 +11,8 @@ def sample(read_path_ct, read_path_ori, save_path, label_column, sum_or_count01,
         print(i, filename)
         data = pd.read_csv(os.path.join(read_path_ct, filename), low_memory=False)
         data['label'].replace(benign, 'benign', inplace=True)
-        data['label'] = data['label'].replace(to_replace = data['label'].unique()[1:], value = 'malicious')
-        
+        #data['label'] = data['label'].replace(to_replace = data['label'].unique()[1:], value = 'malicious')
+        data['label'] = data['label'].apply(lambda x: 'malicious' if x != 'benign' else x)
         # 計算各label的數量
         label_counts = data['label'].value_counts().to_dict()
         print(label_counts)
