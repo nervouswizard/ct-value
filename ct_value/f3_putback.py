@@ -48,7 +48,7 @@ def putback(read_path_data, read_path_pvalue, save_path, label_column, print=pri
 
             for i in range(len(tmpDitc['value'])):
                 if wDict['count'][i] <= 3:
-                    bDict[tmpDitc['value'][i]] = 0.5
+                    mDict[tmpDitc['value'][i]] = 0.5
                 else:
                     mDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
 
