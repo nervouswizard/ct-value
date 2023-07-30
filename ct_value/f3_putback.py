@@ -33,11 +33,15 @@ def putback(read_path_data, read_path_pvalue, save_path, label_column, print=pri
             print('benign P-value Data Shape', pvalueDF.shape)
             tmpDitc = pvalueDF.to_dict(orient='list')
             bDict = dict()
+            
             for i in range(len(tmpDitc['value'])):
+                '''
                 if wDict['count'][i] <= 3:
                     bDict[tmpDitc['value'][i]] = 0.5
                 else:
                     bDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
+                '''
+                bDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
 
             #將csv變成dict {'value': p-value}
             pvalueDataFilenameByColunm = os.path.join(pvaluePath,filename+'m_'+str(c)+'_'+col+'.csv')
@@ -45,13 +49,15 @@ def putback(read_path_data, read_path_pvalue, save_path, label_column, print=pri
             print('malicious P-value Data Shape', pvalueDF.shape)
             tmpDitc = pvalueDF.to_dict(orient='list')
             mDict = dict()
-
+            
             for i in range(len(tmpDitc['value'])):
+                '''
                 if wDict['count'][i] <= 3:
                     mDict[tmpDitc['value'][i]] = 0.5
                 else:
                     mDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
-
+                '''
+                mDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
             #將csv變成dict {'value': weigth}
             
             weigthDataFilenameByColunm = os.path.join(weigthPath,filename+str(c)+'_'+col+'.csv')

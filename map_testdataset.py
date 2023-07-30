@@ -13,13 +13,15 @@ del filename
 column_list = test.columns.to_list()
 drop_column = ['label']
 map_path = os.path.join('data', '2_score', '1_statistic', '2_map_table', '1-1_trn')
-
+count_path = os.path.join('data', '2_score', '2_weight',  '1-1_trn')
 # 對每個feature找對應的map表，將值替換為benign的ct值
 benign_test = test.copy()
 for c, col in enumerate(column_list):
     if col in drop_column: continue
     print(f'replace {c} {col}')
     map_df = pd.read_csv(os.path.join(map_path, 'b_'+str(c)+'_'+column_list[c]+'.csv'), low_memory=False)
+    #count_df = pd.read_csv(os.path.join(count_path, str(c)+'_'+column_list[c]+'.csv'), low_memory=False)
+    #map_df.loc[count_df['count'] <= 3, 'pvalue'] = 0.5
     map_df['pvalue'] = map_df['pvalue']-0.5
     benign_test[col] = benign_test[col].map(map_df.set_index('value')['pvalue']).fillna(0).astype(float)
     del map_df
@@ -32,6 +34,8 @@ for c, col in enumerate(column_list):
     if col in drop_column: continue
     print(f'replace {c} {col}')
     map_df = pd.read_csv(os.path.join(map_path, 'm_'+str(c)+'_'+column_list[c]+'.csv'), low_memory=False)
+    #count_df = pd.read_csv(os.path.join(count_path, str(c)+'_'+column_list[c]+'.csv'), low_memory=False)
+    #map_df.loc[count_df['count'] <= 3, 'pvalue'] = 0.5
     map_df['pvalue'] = map_df['pvalue']-0.5
     malicious_test[col] = malicious_test[col].map(map_df.set_index('value')['pvalue']).fillna(0).astype(float)
     del map_df
