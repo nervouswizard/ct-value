@@ -1,6 +1,18 @@
 import os
 import pandas as pd
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+import matplotlib.pyplot as plt
 
+def draw_confusion_matrix(test_y, preds, t):
+    cm=confusion_matrix(test_y, preds)
+    plt.figure(figsize=(8,8))
+    plt.title(t,fontsize=28)
+    sns.heatmap(cm,square=True,annot=True,fmt='d',linecolor='white',cmap='Greens',linewidths=1.5,cbar=False)
+    plt.xlabel('HS',fontsize=20)
+    plt.ylabel('True',fontsize=20)
+    plt.savefig(os.path.join(save_path, f"{t}.png"))
+    
 save_path = os.path.join('data', '6_mapped_test')
 os.makedirs(save_path, exist_ok=True)
 
@@ -71,6 +83,8 @@ malicious_sum = malicious_test.drop(columns=drop_column, inplace=False).sum(axis
 benign_sum = benign_test.drop(columns=drop_column, inplace=False).sum(axis=1)
 
 compare = malicious_sum>benign_sum
+
+draw_confusion_matrix(test['label'].to_numpy(), compare.to_numpy(), 'map')
 
 test[compare] = malicious_test[compare]
 
