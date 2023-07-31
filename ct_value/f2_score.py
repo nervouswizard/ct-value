@@ -21,9 +21,9 @@ def score(read_path, save_path, _benign, label_column, print=print):
         benign_count = 0
         malicious_count = 0
         for label in data['label']:
-            if label == 0:
+            if label == _benign:
                 benign_count += 1
-            elif label == 1:
+            else:
                 malicious_count += 1
         if benign_count>=malicious_count:
             ratio = malicious_count/benign_count
