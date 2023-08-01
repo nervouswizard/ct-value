@@ -51,12 +51,8 @@ def putback(read_path_data, read_path_pvalue, save_path, label_column, _maliciou
             mDict = dict()
             
             for i in range(len(tmpDitc['value'])):
-<<<<<<< HEAD
-                if wDict['count'][i] <= 3:
-=======
                 '''
                 if wDict['count'][i]  <= 3:
->>>>>>> sample
                     mDict[tmpDitc['value'][i]] = 0.5
                 else:
                     mDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
