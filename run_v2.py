@@ -79,14 +79,14 @@ if __name__=='__main__':
     save_path = os.path.join('data', '2_score')
     os.makedirs(save_path, exist_ok=True)
     score(read_path, save_path, config['benign'], config['label_column'], print)
-
+    
     # f3_putback
     print('f3_putback')
     read_path_data = config['filepath']
     read_path_pvalue = os.path.join('data', '2_score')
     save_path = os.path.join('data', '3_DataWithPvalue')
     os.makedirs(save_path, exist_ok=True)
-    putback(read_path_data, read_path_pvalue, save_path, config['label_column'], print)
+    putback(read_path_data, read_path_pvalue, save_path, config['label_column'], config['malicious'], print)
     
     # f4_sum
     print('f4_sum')
