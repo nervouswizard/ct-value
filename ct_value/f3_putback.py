@@ -1,7 +1,7 @@
 import os, sys
 import pandas as pd
 
-def putback(read_path_data, read_path_pvalue, save_path, label_column, print=print):
+def putback(read_path_data, read_path_pvalue, save_path, label_column, _malicious, print=print):
     os.makedirs(os.path.join(save_path, 'p-value'), exist_ok=True)
     os.makedirs(os.path.join(save_path, 'ct-value'), exist_ok=True)
     os.makedirs(os.path.join(save_path, 'wct-value'), exist_ok=True)
@@ -52,7 +52,7 @@ def putback(read_path_data, read_path_pvalue, save_path, label_column, print=pri
             
             for i in range(len(tmpDitc['value'])):
                 '''
-                if wDict['count'][i] <= 3:
+                if wDict['count'][i]  <= 3:
                     mDict[tmpDitc['value'][i]] = 0.5
                 else:
                     mDict[tmpDitc['value'][i]] = tmpDitc['pvalue'][i]
@@ -72,7 +72,7 @@ def putback(read_path_data, read_path_pvalue, save_path, label_column, print=pri
             #將原本csv內的值改為p_value
             for i in range(len(Pdata.index)):
                 feature = Pdata.at[i, col]
-                if Pdata.at[i, 'label'] == 'malicious':
+                if Pdata.at[i, 'label'] == _malicious:
                     Pdata.at[i, col] = mDict.get(feature, 0)
                     CTdata.at[i, col] = (mDict.get(feature, 0)-0.5)
                     WCTdata.at[i, col] = (mDict.get(feature, 0)-0.5) * weigth.get(feature, 0)
