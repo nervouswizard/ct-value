@@ -1,0 +1,68 @@
+Traceback (most recent call last):
+  File "E:\專題相關\p-value\ct-value\run.py", line 79, in <module>
+    sum(read_path, save_path, config['label_column'], config['sum_or_count01'], print)
+  File "E:\專題相關\p-value\ct-value\ct_value\f4_sum.py", line 30, in sum
+    data.to_csv(os.path.join(save_path, t, 'train.csv'), index=None)
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\core\generic.py", line 3772, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\io\formats\format.py", line 1186, in to_csv
+    csv_formatter.save()
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\io\formats\csvs.py", line 240, in save
+    with get_handle(
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\io\common.py", line 737, in get_handle
+    check_parent_directory(str(handle))
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\io\common.py", line 600, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'data\4_sum\p-value'
+Traceback (most recent call last):
+  File "E:\專題相關\p-value\ct-value\run.py", line 87, in <module>
+    sample(file_path_ct, file_path_ori, save_path, config['label_column'], config['sum_or_count01'], print)
+  File "E:\專題相關\p-value\ct-value\ct_value\f5_sample.py", line 12, in sample
+    min_label = min(label_counts['0'], label_counts['1'])
+KeyError: '0'
+Traceback (most recent call last):
+  File "E:\專題相關\p-value\ct-value\run.py", line 101, in <module>
+    do_sum(read_path, save_path, config['label_column'])
+  File "E:\專題相關\p-value\ct-value\ct_value\f7_sum_testest.py", line 14, in do_sum
+    test['sum'] = test.drop(columns=label_column, inplace=False).sum(axis=1)
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\core\frame.py", line 5266, in drop
+    return super().drop(
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\core\generic.py", line 4549, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\core\generic.py", line 4591, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\core\indexes\base.py", line 6696, in drop
+    raise KeyError(f"{list(labels[mask])} not found in axis")
+KeyError: "['sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum'] not found in axis"
+Traceback (most recent call last):
+  File "E:\專題相關\p-value\ct-value\run.py", line 101, in <module>
+    do_sum(read_path, save_path, config['label_column'], print)
+  File "E:\專題相關\p-value\ct-value\ct_value\f7_sum_testest.py", line 14, in do_sum
+    test['sum'] = test.drop(columns=label_column, inplace=False).sum(axis=1)
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\core\frame.py", line 5266, in drop
+    return super().drop(
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\core\generic.py", line 4549, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\core\generic.py", line 4591, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\core\indexes\base.py", line 6696, in drop
+    raise KeyError(f"{list(labels[mask])} not found in axis")
+KeyError: "['sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum'] not found in axis"
+Traceback (most recent call last):
+  File "E:\專題相關\p-value\ct-value\run.py", line 64, in <module>
+    score(file_path, save_path, config['label_column'], print)
+  File "E:\專題相關\p-value\ct-value\ct_value\f2_score.py", line 30, in score
+    data = pd.read_csv(file_path, usecols=[col, 'label'], low_memory=False)
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\io\parsers\readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\io\parsers\readers.py", line 583, in _read
+    return parser.read(nrows)
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\io\parsers\readers.py", line 1704, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "E:\專題相關\p-value\p-value\venv_Pvalue\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 239, in read
+    data = self._reader.read(nrows)
+  File "pandas\_libs\parsers.pyx", line 794, in pandas._libs.parsers.TextReader.read
+  File "pandas\_libs\parsers.pyx", line 882, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas\_libs\parsers.pyx", line 859, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas\_libs\parsers.pyx", line 2025, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Calling read(nbytes) on source failed. Try engine='python'.

@@ -1,0 +1,478 @@
+[2023/08/12 16:16:00] f2_score
+[2023/08/12 16:16:00] data\1_preprocess\train.csv
+[2023/08/12 16:16:00] 0 dur
+[2023/08/12 16:16:00] 1 service
+[2023/08/12 16:16:01] 2 spkts
+[2023/08/12 16:16:01] 3 dpkts
+[2023/08/12 16:16:01] 4 dbytes
+[2023/08/12 16:16:01] 5 sttl
+[2023/08/12 16:16:01] 6 sload
+[2023/08/12 16:16:01] 7 dload
+[2023/08/12 16:16:01] 8 sloss
+[2023/08/12 16:16:01] 9 dloss
+[2023/08/12 16:16:01] 10 stcpb
+[2023/08/12 16:16:01] 11 dtcpb
+[2023/08/12 16:16:02] 12 synack
+[2023/08/12 16:16:02] 13 smean
+[2023/08/12 16:16:02] 14 dmean
+[2023/08/12 16:16:02] 15 ct_srv_src
+[2023/08/12 16:16:02] 16 ct_dst_src_ltm
+[2023/08/12 16:16:02] 17 is_ftp_login
+[2023/08/12 16:16:02] 18 ct_ftp_cmd
+[2023/08/12 16:16:02] 19 ct_flw_http_mthd
+[2023/08/12 16:16:02] 20 ct_src_ltm
+[2023/08/12 16:16:02] 21 ct_srv_dst
+[2023/08/12 16:16:03] 22 is_sm_ips_ports
+[2023/08/12 16:16:03] f3_putback
+[2023/08/12 16:16:03] Process 0 dur
+[2023/08/12 16:16:03] benign P-value Data Shape (39888, 2)
+[2023/08/12 16:16:06] Process 1 service
+[2023/08/12 16:16:06] benign P-value Data Shape (13, 2)
+[2023/08/12 16:16:09] Process 2 spkts
+[2023/08/12 16:16:09] benign P-value Data Shape (420, 2)
+[2023/08/12 16:16:12] Process 3 dpkts
+[2023/08/12 16:16:12] benign P-value Data Shape (436, 2)
+[2023/08/12 16:16:15] Process 4 dbytes
+[2023/08/12 16:16:15] benign P-value Data Shape (4034, 2)
+[2023/08/12 16:16:18] Process 5 sttl
+[2023/08/12 16:16:18] benign P-value Data Shape (11, 2)
+[2023/08/12 16:16:21] Process 6 sload
+[2023/08/12 16:16:21] benign P-value Data Shape (42873, 2)
+[2023/08/12 16:16:24] Process 7 dload
+[2023/08/12 16:16:24] benign P-value Data Shape (40614, 2)
+[2023/08/12 16:16:27] Process 8 sloss
+[2023/08/12 16:16:27] benign P-value Data Shape (253, 2)
+[2023/08/12 16:16:30] Process 9 dloss
+[2023/08/12 16:16:30] benign P-value Data Shape (311, 2)
+[2023/08/12 16:16:33] Process 10 stcpb
+[2023/08/12 16:16:33] benign P-value Data Shape (39219, 2)
+[2023/08/12 16:16:36] Process 11 dtcpb
+[2023/08/12 16:16:36] benign P-value Data Shape (39108, 2)
+[2023/08/12 16:16:39] Process 12 synack
+[2023/08/12 16:16:39] benign P-value Data Shape (24934, 2)
+[2023/08/12 16:16:42] Process 13 smean
+[2023/08/12 16:16:42] benign P-value Data Shape (1282, 2)
+[2023/08/12 16:16:45] Process 14 dmean
+[2023/08/12 16:16:45] benign P-value Data Shape (1222, 2)
+[2023/08/12 16:16:48] Process 15 ct_srv_src
+[2023/08/12 16:16:48] benign P-value Data Shape (57, 2)
+[2023/08/12 16:16:50] Process 16 ct_dst_src_ltm
+[2023/08/12 16:16:50] benign P-value Data Shape (57, 2)
+[2023/08/12 16:16:53] Process 17 is_ftp_login
+[2023/08/12 16:16:53] benign P-value Data Shape (3, 2)
+[2023/08/12 16:16:56] Process 18 ct_ftp_cmd
+[2023/08/12 16:16:56] benign P-value Data Shape (3, 2)
+[2023/08/12 16:16:59] Process 19 ct_flw_http_mthd
+[2023/08/12 16:16:59] benign P-value Data Shape (8, 2)
+[2023/08/12 16:17:02] Process 20 ct_src_ltm
+[2023/08/12 16:17:02] benign P-value Data Shape (50, 2)
+[2023/08/12 16:17:05] Process 21 ct_srv_dst
+[2023/08/12 16:17:05] benign P-value Data Shape (57, 2)
+[2023/08/12 16:17:08] Process 22 is_sm_ips_ports
+[2023/08/12 16:17:08] benign P-value Data Shape (2, 2)
+[2023/08/12 16:17:14] f4_sum
+[2023/08/12 16:17:14] execute sum
+[2023/08/12 16:21:13] f4_sum
+[2023/08/12 16:21:14] execute sum
+[2023/08/12 16:21:16] execute sum
+[2023/08/12 16:21:17] f5_sample
+[2023/08/12 16:21:17] {1: 45332, 0: 37000}
+[2023/08/12 16:21:51] f5_sample
+[2023/08/12 16:21:51] {1: 45332, 0: 37000}
+[2023/08/12 16:21:51] 37000
+[2023/08/12 16:21:51] 45332
+[2023/08/12 16:28:24] f5_sample
+[2023/08/12 16:28:25] {1: 45332, 0: 37000}
+[2023/08/12 16:28:28] 增加資料筆數： 12
+[2023/08/12 16:28:28] f6_map_testset
+replace 0 dur
+replace 1 service
+replace 2 spkts
+replace 3 dpkts
+replace 4 dbytes
+replace 5 sttl
+replace 6 sload
+replace 7 dload
+replace 8 sloss
+replace 9 dloss
+replace 10 stcpb
+replace 11 dtcpb
+replace 12 synack
+replace 13 smean
+replace 14 dmean
+replace 15 ct_srv_src
+replace 16 ct_dst_src_ltm
+replace 17 is_ftp_login
+replace 18 ct_ftp_cmd
+replace 19 ct_flw_http_mthd
+replace 20 ct_src_ltm
+replace 21 ct_srv_dst
+replace 22 is_sm_ips_ports
+[2023/08/12 16:28:34] f7_sum_testset
+0 .Loading data : benign_test.csv
+--add sum start
+[2023/08/12 16:29:52] f7_sum_testset
+[2023/08/12 16:29:52] 0 .Loading data : benign_test.csv
+[2023/08/12 16:29:53] --add sum start
+[2023/08/12 16:29:53] Index(['dur', 'service', 'spkts', 'dpkts', 'dbytes', 'sttl', 'sload', 'dload',
+       'sloss', 'dloss', 'stcpb', 'dtcpb', 'synack', 'smean', 'dmean',
+       'ct_srv_src', 'ct_dst_src_ltm', 'is_ftp_login', 'ct_ftp_cmd',
+       'ct_flw_http_mthd', 'ct_src_ltm', 'ct_srv_dst', 'is_sm_ips_ports',
+       'label'],
+      dtype='object')
+[2023/08/12 16:29:53] ['label']
+[2023/08/12 16:29:53] --add sum done
+[2023/08/12 16:29:53] saving...
+[2023/08/12 16:29:56] saved benign_test.csv
+[2023/08/12 16:29:56] 1 .Loading data : pvalue_test.csv
+[2023/08/12 16:29:57] --add sum start
+[2023/08/12 16:29:57] Index(['dur', 'service', 'spkts', 'dpkts', 'dbytes', 'sttl', 'sload', 'dload',
+       'sloss', 'dloss', 'stcpb', 'dtcpb', 'synack', 'smean', 'dmean',
+       'ct_srv_src', 'ct_dst_src_ltm', 'is_ftp_login', 'ct_ftp_cmd',
+       'ct_flw_http_mthd', 'ct_src_ltm', 'ct_srv_dst', 'is_sm_ips_ports',
+       'label'],
+      dtype='object')
+[2023/08/12 16:29:57] ['label']
+[2023/08/12 16:29:57] --add sum done
+[2023/08/12 16:29:57] saving...
+[2023/08/12 16:30:00] saved pvalue_test.csv
+[2023/08/12 16:33:21] f2_score
+[2023/08/12 16:33:21] data\1_preprocess\train.csv
+[2023/08/12 16:33:21] 0 dur
+[2023/08/12 16:33:21] 1 service
+[2023/08/12 16:33:21] 2 spkts
+[2023/08/12 16:33:21] 3 dpkts
+[2023/08/12 16:33:21] 4 dbytes
+[2023/08/12 16:33:21] 5 sttl
+[2023/08/12 16:33:21] 6 sload
+[2023/08/12 16:33:22] 7 dload
+[2023/08/12 16:33:22] 8 sloss
+[2023/08/12 16:33:22] 9 dloss
+[2023/08/12 16:33:22] 10 stcpb
+[2023/08/12 16:33:22] 11 dtcpb
+[2023/08/12 16:33:22] 12 synack
+[2023/08/12 16:33:22] 13 smean
+[2023/08/12 16:33:22] 14 dmean
+[2023/08/12 16:33:22] 15 ct_srv_src
+[2023/08/12 16:33:22] 16 ct_dst_src_ltm
+[2023/08/12 16:33:23] 17 is_ftp_login
+[2023/08/12 16:33:23] 18 ct_ftp_cmd
+[2023/08/12 16:33:23] 19 ct_flw_http_mthd
+[2023/08/12 16:33:23] 20 ct_src_ltm
+[2023/08/12 16:33:23] 21 ct_srv_dst
+[2023/08/12 16:33:23] 22 is_sm_ips_ports
+[2023/08/12 16:33:23] f3_putback
+[2023/08/12 16:33:23] Process 0 dur
+[2023/08/12 16:33:23] benign P-value Data Shape (39888, 2)
+[2023/08/12 16:33:26] Process 1 service
+[2023/08/12 16:33:26] benign P-value Data Shape (13, 2)
+[2023/08/12 16:33:29] Process 2 spkts
+[2023/08/12 16:33:29] benign P-value Data Shape (420, 2)
+[2023/08/12 16:33:32] Process 3 dpkts
+[2023/08/12 16:33:32] benign P-value Data Shape (436, 2)
+[2023/08/12 16:33:34] Process 4 dbytes
+[2023/08/12 16:33:34] benign P-value Data Shape (4034, 2)
+[2023/08/12 16:33:37] Process 5 sttl
+[2023/08/12 16:33:37] benign P-value Data Shape (11, 2)
+[2023/08/12 16:33:40] Process 6 sload
+[2023/08/12 16:33:40] benign P-value Data Shape (42873, 2)
+[2023/08/12 16:33:43] Process 7 dload
+[2023/08/12 16:33:43] benign P-value Data Shape (40614, 2)
+[2023/08/12 16:33:46] Process 8 sloss
+[2023/08/12 16:33:46] benign P-value Data Shape (253, 2)
+[2023/08/12 16:33:49] Process 9 dloss
+[2023/08/12 16:33:49] benign P-value Data Shape (311, 2)
+[2023/08/12 16:33:52] Process 10 stcpb
+[2023/08/12 16:33:52] benign P-value Data Shape (39219, 2)
+[2023/08/12 16:33:54] Process 11 dtcpb
+[2023/08/12 16:33:54] benign P-value Data Shape (39108, 2)
+[2023/08/12 16:33:57] Process 12 synack
+[2023/08/12 16:33:58] benign P-value Data Shape (24934, 2)
+[2023/08/12 16:34:00] Process 13 smean
+[2023/08/12 16:34:00] benign P-value Data Shape (1282, 2)
+[2023/08/12 16:34:03] Process 14 dmean
+[2023/08/12 16:34:03] benign P-value Data Shape (1222, 2)
+[2023/08/12 16:34:06] Process 15 ct_srv_src
+[2023/08/12 16:34:06] benign P-value Data Shape (57, 2)
+[2023/08/12 16:34:09] Process 16 ct_dst_src_ltm
+[2023/08/12 16:34:09] benign P-value Data Shape (57, 2)
+[2023/08/12 16:34:12] Process 17 is_ftp_login
+[2023/08/12 16:34:12] benign P-value Data Shape (3, 2)
+[2023/08/12 16:34:15] Process 18 ct_ftp_cmd
+[2023/08/12 16:34:15] benign P-value Data Shape (3, 2)
+[2023/08/12 16:34:17] Process 19 ct_flw_http_mthd
+[2023/08/12 16:34:17] benign P-value Data Shape (8, 2)
+[2023/08/12 16:34:20] Process 20 ct_src_ltm
+[2023/08/12 16:34:20] benign P-value Data Shape (50, 2)
+[2023/08/12 16:34:23] Process 21 ct_srv_dst
+[2023/08/12 16:34:23] benign P-value Data Shape (57, 2)
+[2023/08/12 16:34:26] Process 22 is_sm_ips_ports
+[2023/08/12 16:34:26] benign P-value Data Shape (2, 2)
+[2023/08/12 16:34:31] f4_sum
+[2023/08/12 16:34:32] execute sum
+[2023/08/12 16:34:34] execute sum
+[2023/08/12 16:34:35] f5_sample
+[2023/08/12 16:34:35] {1: 45332, 0: 37000}
+[2023/08/12 16:34:38] 增加資料筆數： 12
+[2023/08/12 16:34:38] f6_map_testset
+[2023/08/12 16:34:38] replace 0 dur
+[2023/08/12 16:34:38] replace 1 service
+[2023/08/12 16:34:38] replace 2 spkts
+[2023/08/12 16:34:38] replace 3 dpkts
+[2023/08/12 16:34:38] replace 4 dbytes
+[2023/08/12 16:34:38] replace 5 sttl
+[2023/08/12 16:34:38] replace 6 sload
+[2023/08/12 16:34:38] replace 7 dload
+[2023/08/12 16:34:38] replace 8 sloss
+[2023/08/12 16:34:38] replace 9 dloss
+[2023/08/12 16:34:38] replace 10 stcpb
+[2023/08/12 16:34:38] replace 11 dtcpb
+[2023/08/12 16:34:38] replace 12 synack
+[2023/08/12 16:34:38] replace 13 smean
+[2023/08/12 16:34:38] replace 14 dmean
+[2023/08/12 16:34:38] replace 15 ct_srv_src
+[2023/08/12 16:34:38] replace 16 ct_dst_src_ltm
+[2023/08/12 16:34:38] replace 17 is_ftp_login
+[2023/08/12 16:34:38] replace 18 ct_ftp_cmd
+[2023/08/12 16:34:38] replace 19 ct_flw_http_mthd
+[2023/08/12 16:34:38] replace 20 ct_src_ltm
+[2023/08/12 16:34:38] replace 21 ct_srv_dst
+[2023/08/12 16:34:38] replace 22 is_sm_ips_ports
+[2023/08/12 16:34:44] f7_sum_testset
+[2023/08/12 16:34:44] 0 .Loading data : benign_test.csv
+[2023/08/12 16:34:45] Index(['dur', 'service', 'spkts', 'dpkts', 'dbytes', 'sttl', 'sload', 'dload',
+       'sloss', 'dloss', 'stcpb', 'dtcpb', 'synack', 'smean', 'dmean',
+       'ct_srv_src', 'ct_dst_src_ltm', 'is_ftp_login', 'ct_ftp_cmd',
+       'ct_flw_http_mthd', 'ct_src_ltm', 'ct_srv_dst', 'is_sm_ips_ports',
+       'label'],
+      dtype='object')
+[2023/08/12 16:34:45] ['label', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum', 'sum']
+[2023/08/12 16:44:31] f2_score
+[2023/08/12 16:44:31] data\1_preprocess\train.csv
+[2023/08/12 16:44:31] 0 dur
+[2023/08/12 16:44:31] 1 service
+[2023/08/12 16:44:31] 2 spkts
+[2023/08/12 16:44:31] 3 dpkts
+[2023/08/12 16:44:31] 4 dbytes
+[2023/08/12 16:44:31] 5 sttl
+[2023/08/12 16:44:31] 6 sload
+[2023/08/12 16:44:31] 7 dload
+[2023/08/12 16:44:32] 8 sloss
+[2023/08/12 16:44:32] 9 dloss
+[2023/08/12 16:44:32] 10 stcpb
+[2023/08/12 16:44:32] 11 dtcpb
+[2023/08/12 16:44:32] 12 synack
+[2023/08/12 16:44:32] 13 smean
+[2023/08/12 16:44:32] 14 dmean
+[2023/08/12 16:44:32] 15 ct_srv_src
+[2023/08/12 16:44:32] 16 ct_dst_src_ltm
+[2023/08/12 16:44:32] 17 is_ftp_login
+[2023/08/12 16:44:32] 18 ct_ftp_cmd
+[2023/08/12 16:44:33] 19 ct_flw_http_mthd
+[2023/08/12 16:44:33] 20 ct_src_ltm
+[2023/08/12 16:44:33] 21 ct_srv_dst
+[2023/08/12 16:44:33] 22 is_sm_ips_ports
+[2023/08/12 16:44:33] f3_putback
+[2023/08/12 16:44:33] Process 0 dur
+[2023/08/12 16:44:33] benign P-value Data Shape (39888, 2)
+[2023/08/12 16:44:36] Process 1 service
+[2023/08/12 16:44:36] benign P-value Data Shape (13, 2)
+[2023/08/12 16:44:39] Process 2 spkts
+[2023/08/12 16:44:39] benign P-value Data Shape (420, 2)
+[2023/08/12 16:44:42] Process 3 dpkts
+[2023/08/12 16:44:42] benign P-value Data Shape (436, 2)
+[2023/08/12 16:44:44] Process 4 dbytes
+[2023/08/12 16:44:44] benign P-value Data Shape (4034, 2)
+[2023/08/12 16:44:47] Process 5 sttl
+[2023/08/12 16:44:47] benign P-value Data Shape (11, 2)
+[2023/08/12 16:44:50] Process 6 sload
+[2023/08/12 16:44:50] benign P-value Data Shape (42873, 2)
+[2023/08/12 16:44:53] Process 7 dload
+[2023/08/12 16:44:53] benign P-value Data Shape (40614, 2)
+[2023/08/12 16:44:56] Process 8 sloss
+[2023/08/12 16:44:56] benign P-value Data Shape (253, 2)
+[2023/08/12 16:44:59] Process 9 dloss
+[2023/08/12 16:44:59] benign P-value Data Shape (311, 2)
+[2023/08/12 16:45:02] Process 10 stcpb
+[2023/08/12 16:45:02] benign P-value Data Shape (39219, 2)
+[2023/08/12 16:45:05] Process 11 dtcpb
+[2023/08/12 16:45:05] benign P-value Data Shape (39108, 2)
+[2023/08/12 16:45:07] Process 12 synack
+[2023/08/12 16:45:07] benign P-value Data Shape (24934, 2)
+[2023/08/12 16:45:10] Process 13 smean
+[2023/08/12 16:45:10] benign P-value Data Shape (1282, 2)
+[2023/08/12 16:45:13] Process 14 dmean
+[2023/08/12 16:45:13] benign P-value Data Shape (1222, 2)
+[2023/08/12 16:45:16] Process 15 ct_srv_src
+[2023/08/12 16:45:16] benign P-value Data Shape (57, 2)
+[2023/08/12 16:45:19] Process 16 ct_dst_src_ltm
+[2023/08/12 16:45:19] benign P-value Data Shape (57, 2)
+[2023/08/12 16:45:22] Process 17 is_ftp_login
+[2023/08/12 16:45:22] benign P-value Data Shape (3, 2)
+[2023/08/12 16:45:24] Process 18 ct_ftp_cmd
+[2023/08/12 16:45:24] benign P-value Data Shape (3, 2)
+[2023/08/12 16:45:27] Process 19 ct_flw_http_mthd
+[2023/08/12 16:45:27] benign P-value Data Shape (8, 2)
+[2023/08/12 16:45:30] Process 20 ct_src_ltm
+[2023/08/12 16:45:30] benign P-value Data Shape (50, 2)
+[2023/08/12 16:45:33] Process 21 ct_srv_dst
+[2023/08/12 16:45:33] benign P-value Data Shape (57, 2)
+[2023/08/12 16:45:36] Process 22 is_sm_ips_ports
+[2023/08/12 16:45:36] benign P-value Data Shape (2, 2)
+[2023/08/12 16:45:41] f4_sum
+[2023/08/12 16:45:41] execute sum
+[2023/08/12 16:45:43] execute sum
+[2023/08/12 16:45:45] f5_sample
+[2023/08/12 16:45:45] {1: 45332, 0: 37000}
+[2023/08/12 16:45:48] 增加資料筆數： 12
+[2023/08/12 16:45:48] f6_map_testset
+[2023/08/12 16:45:48] replace 0 dur
+[2023/08/12 16:45:48] replace 1 service
+[2023/08/12 16:45:48] replace 2 spkts
+[2023/08/12 16:45:48] replace 3 dpkts
+[2023/08/12 16:45:48] replace 4 dbytes
+[2023/08/12 16:45:48] replace 5 sttl
+[2023/08/12 16:45:48] replace 6 sload
+[2023/08/12 16:45:48] replace 7 dload
+[2023/08/12 16:45:48] replace 8 sloss
+[2023/08/12 16:45:48] replace 9 dloss
+[2023/08/12 16:45:48] replace 10 stcpb
+[2023/08/12 16:45:48] replace 11 dtcpb
+[2023/08/12 16:45:48] replace 12 synack
+[2023/08/12 16:45:48] replace 13 smean
+[2023/08/12 16:45:48] replace 14 dmean
+[2023/08/12 16:45:48] replace 15 ct_srv_src
+[2023/08/12 16:45:48] replace 16 ct_dst_src_ltm
+[2023/08/12 16:45:48] replace 17 is_ftp_login
+[2023/08/12 16:45:48] replace 18 ct_ftp_cmd
+[2023/08/12 16:45:48] replace 19 ct_flw_http_mthd
+[2023/08/12 16:45:48] replace 20 ct_src_ltm
+[2023/08/12 16:45:48] replace 21 ct_srv_dst
+[2023/08/12 16:45:48] replace 22 is_sm_ips_ports
+[2023/08/12 16:45:54] f7_sum_testset
+[2023/08/12 16:45:54] 0 .Loading data : benign_test.csv
+[2023/08/12 16:45:55] Index(['dur', 'service', 'spkts', 'dpkts', 'dbytes', 'sttl', 'sload', 'dload',
+       'sloss', 'dloss', 'stcpb', 'dtcpb', 'synack', 'smean', 'dmean',
+       'ct_srv_src', 'ct_dst_src_ltm', 'is_ftp_login', 'ct_ftp_cmd',
+       'ct_flw_http_mthd', 'ct_src_ltm', 'ct_srv_dst', 'is_sm_ips_ports',
+       'label'],
+      dtype='object')
+[2023/08/12 16:45:55] ['label']
+[2023/08/12 16:45:58] 1 .Loading data : pvalue_test.csv
+[2023/08/12 16:45:58] Index(['dur', 'service', 'spkts', 'dpkts', 'dbytes', 'sttl', 'sload', 'dload',
+       'sloss', 'dloss', 'stcpb', 'dtcpb', 'synack', 'smean', 'dmean',
+       'ct_srv_src', 'ct_dst_src_ltm', 'is_ftp_login', 'ct_ftp_cmd',
+       'ct_flw_http_mthd', 'ct_src_ltm', 'ct_srv_dst', 'is_sm_ips_ports',
+       'label'],
+      dtype='object')
+[2023/08/12 16:45:58] ['label']
+[2023/08/12 16:49:54] f2_score
+[2023/08/12 16:49:54] data\1_preprocess\train.csv
+[2023/08/12 16:49:54] 0 dur
+[2023/08/12 16:49:54] 1 service
+[2023/08/12 16:49:54] 2 spkts
+[2023/08/12 16:51:06] f2_score
+[2023/08/12 16:51:06] data\1_preprocess\train.csv
+[2023/08/12 16:51:06] 0 dur
+[2023/08/12 16:51:06] 1 service
+[2023/08/12 16:51:06] 2 spkts
+[2023/08/12 16:51:06] 3 dpkts
+[2023/08/12 16:51:06] 4 dbytes
+[2023/08/12 16:51:06] 5 sttl
+[2023/08/12 16:51:06] 6 sload
+[2023/08/12 16:51:06] 7 dload
+[2023/08/12 16:51:06] 8 sloss
+[2023/08/12 16:51:06] 9 dloss
+[2023/08/12 16:51:06] 10 stcpb
+[2023/08/12 16:51:06] 11 dtcpb
+[2023/08/12 16:51:07] 12 synack
+[2023/08/12 16:51:07] 13 smean
+[2023/08/12 16:51:07] 14 dmean
+[2023/08/12 16:51:07] 15 ct_srv_src
+[2023/08/12 16:51:07] 16 ct_dst_src_ltm
+[2023/08/12 16:51:07] 17 is_ftp_login
+[2023/08/12 16:51:07] 18 ct_ftp_cmd
+[2023/08/12 16:51:07] 19 ct_flw_http_mthd
+[2023/08/12 16:51:07] 20 ct_src_ltm
+[2023/08/12 16:51:07] 21 ct_srv_dst
+[2023/08/12 16:51:07] 22 is_sm_ips_ports
+[2023/08/12 16:51:07] f3_putback
+[2023/08/12 16:51:07] Process 0 dur
+[2023/08/12 16:51:07] benign P-value Data Shape (74, 2)
+[2023/08/12 16:51:07] Process 1 service
+[2023/08/12 16:51:07] benign P-value Data Shape (6, 2)
+[2023/08/12 16:51:07] Process 2 spkts
+[2023/08/12 16:51:07] benign P-value Data Shape (19, 2)
+[2023/08/12 16:51:07] Process 3 dpkts
+[2023/08/12 16:51:07] benign P-value Data Shape (17, 2)
+[2023/08/12 16:51:07] Process 4 dbytes
+[2023/08/12 16:51:07] benign P-value Data Shape (38, 2)
+[2023/08/12 16:51:07] Process 5 sttl
+[2023/08/12 16:51:07] benign P-value Data Shape (3, 2)
+[2023/08/12 16:51:07] Process 6 sload
+[2023/08/12 16:51:07] benign P-value Data Shape (88, 2)
+[2023/08/12 16:51:07] Process 7 dload
+[2023/08/12 16:51:07] benign P-value Data Shape (60, 2)
+[2023/08/12 16:51:07] Process 8 sloss
+[2023/08/12 16:51:07] benign P-value Data Shape (11, 2)
+[2023/08/12 16:51:07] Process 9 dloss
+[2023/08/12 16:51:07] benign P-value Data Shape (16, 2)
+[2023/08/12 16:51:07] Process 10 stcpb
+[2023/08/12 16:51:07] benign P-value Data Shape (54, 2)
+[2023/08/12 16:51:07] Process 11 dtcpb
+[2023/08/12 16:51:07] benign P-value Data Shape (54, 2)
+[2023/08/12 16:51:07] Process 12 synack
+[2023/08/12 16:51:07] benign P-value Data Shape (53, 2)
+[2023/08/12 16:51:07] Process 13 smean
+[2023/08/12 16:51:07] benign P-value Data Shape (47, 2)
+[2023/08/12 16:51:07] Process 14 dmean
+[2023/08/12 16:51:07] benign P-value Data Shape (34, 2)
+[2023/08/12 16:51:07] Process 15 ct_srv_src
+[2023/08/12 16:51:07] benign P-value Data Shape (26, 2)
+[2023/08/12 16:51:07] Process 16 ct_dst_src_ltm
+[2023/08/12 16:51:07] benign P-value Data Shape (19, 2)
+[2023/08/12 16:51:07] Process 17 is_ftp_login
+[2023/08/12 16:51:07] benign P-value Data Shape (1, 2)
+[2023/08/12 16:51:07] Process 18 ct_ftp_cmd
+[2023/08/12 16:51:07] benign P-value Data Shape (1, 2)
+[2023/08/12 16:51:07] Process 19 ct_flw_http_mthd
+[2023/08/12 16:51:07] benign P-value Data Shape (2, 2)
+[2023/08/12 16:51:07] Process 20 ct_src_ltm
+[2023/08/12 16:51:07] benign P-value Data Shape (17, 2)
+[2023/08/12 16:51:07] Process 21 ct_srv_dst
+[2023/08/12 16:51:07] benign P-value Data Shape (24, 2)
+[2023/08/12 16:51:07] Process 22 is_sm_ips_ports
+[2023/08/12 16:51:07] benign P-value Data Shape (1, 2)
+[2023/08/12 16:51:07] f4_sum
+[2023/08/12 16:51:07] execute sum
+[2023/08/12 16:51:07] execute sum
+[2023/08/12 16:51:07] f5_sample
+[2023/08/12 16:51:07] {1: 54, 0: 46}
+[2023/08/12 16:51:07] 增加資料筆數： 6
+[2023/08/12 16:51:07] f6_map_testset
+[2023/08/12 16:51:07] replace 0 dur
+[2023/08/12 16:51:07] replace 1 service
+[2023/08/12 16:51:07] replace 2 spkts
+[2023/08/12 16:51:07] replace 3 dpkts
+[2023/08/12 16:51:07] replace 4 dbytes
+[2023/08/12 16:51:07] replace 5 sttl
+[2023/08/12 16:51:07] replace 6 sload
+[2023/08/12 16:51:07] replace 7 dload
+[2023/08/12 16:51:07] replace 8 sloss
+[2023/08/12 16:51:07] replace 9 dloss
+[2023/08/12 16:51:07] replace 10 stcpb
+[2023/08/12 16:51:07] replace 11 dtcpb
+[2023/08/12 16:51:07] replace 12 synack
+[2023/08/12 16:51:07] replace 13 smean
+[2023/08/12 16:51:07] replace 14 dmean
+[2023/08/12 16:51:07] replace 15 ct_srv_src
+[2023/08/12 16:51:07] replace 16 ct_dst_src_ltm
+[2023/08/12 16:51:07] replace 17 is_ftp_login
+[2023/08/12 16:51:07] replace 18 ct_ftp_cmd
+[2023/08/12 16:51:07] replace 19 ct_flw_http_mthd
+[2023/08/12 16:51:07] replace 20 ct_src_ltm
+[2023/08/12 16:51:07] replace 21 ct_srv_dst
+[2023/08/12 16:51:07] replace 22 is_sm_ips_ports
+[2023/08/12 16:51:07] f7_sum_testset
+[2023/08/12 16:51:07] 0 .Loading data : benign_test.csv
+[2023/08/12 16:51:07] 1 .Loading data : pvalue_test.csv
