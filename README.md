@@ -16,10 +16,6 @@ python project of implement ct-value
 data\4_sum、data\7_sum_test
 
 ## 前處理資料格式
-資料須為.csv檔案 名稱不限 有多個csv檔案也可以 但須放在同一資料夾底下
-
-資料建議放在data/1_preprocess
-
 csv檔案不能有行號(row), 第一行須為column name
 
 column name內不能包含特殊字元ex: \ / ? " * | < >
