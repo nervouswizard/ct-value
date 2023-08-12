@@ -4,14 +4,14 @@ import numpy as np
 
 def sum(read_path, save_path, label_column, sum_or_count01, print=print):
     # 讀檔
-    for i, filename in enumerate(os.listdir(read_path)):
-        if not filename.endswith('.csv'): continue
-        print(i, filename)
-        data = pd.read_csv(os.path.join(read_path, filename), low_memory=False)
+    type_list = ['p-value', 'ct-value']
+    for t in type_list:
+        file_path = os.path.join(read_path, t, 'train.csv')
+        data = pd.read_csv(file_path, low_memory=False)
         data = data.drop(columns=label_column)
         num_columns = data.shape[1]
         nparr = data.to_numpy()
-        data = pd.read_csv(os.path.join(read_path, filename), low_memory=False)
+        data = pd.read_csv(file_path, low_memory=False)
         if sum_or_count01 == 'sum':
             #avg與sum擇一使用，效果相同
             #avg = np.mean(nparr, axis=1)
@@ -27,6 +27,5 @@ def sum(read_path, save_path, label_column, sum_or_count01, print=print):
             print('something wrong.please check config.ini :sum_or_count01')
             return
         #save
-        print('saving ' + filename)
-        data.to_csv(os.path.join(save_path, filename), index=None)
-        print('done')
+        os.makedirs(os.path.join(save_path, t), exist_ok=True)
+        data.to_csv(os.path.join(save_path, t, 'train.csv'), index=None)
