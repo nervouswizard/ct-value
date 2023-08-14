@@ -13,15 +13,15 @@ def sample(file_path_ct, file_path_ori, save_path, label_column, sum_or_count01,
 
     # 保留較少數量的label，較多資料的label做之後的採樣
     if label_counts[0] > label_counts[1]:
-        data_reserve = data[data['label'] != 'benign']
-        data = data[data['label'] == 'benign']
+        data_reserve = data[data['label'] != 0]
+        data = data[data['label'] == 0]
     else:
-        data_reserve = data[data['label'] == 'benign']
-        data = data[data['label'] != 'benign']
+        data_reserve = data[data['label'] == 0]
+        data = data[data['label'] != 0]
 
     # 讀原始檔案
     ori_data = pd.read_csv(file_path_ori, low_memory=False)
-    ori_data['label'] = ori_data['label'].replace(to_replace = ori_data['label'].unique()[1:], value = 'malicious')
+    ori_data['label'] = ori_data['label'].replace(to_replace = ori_data['label'].unique()[1:], value = 1)
 
     # 保留較少數量的label，較多資料的label做之後的採樣
     ori_data_reserve = ori_data.loc[data_reserve.index]
