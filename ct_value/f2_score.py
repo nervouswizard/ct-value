@@ -1,5 +1,6 @@
 from collections import Counter
 import pandas as pd
+import numpy as np
 import os
 #ct值=p值-0.5
 def score(file_path, save_path, label_column, print=print):
@@ -44,10 +45,7 @@ def score(file_path, save_path, label_column, print=print):
         for key, value in feature_counts.items():
             # 平衡數量
             balance_pvalue[key] = pvalue[key] * ratio / (pvalue[key] * ratio + (1 - pvalue[key]))
-            
-
-        pvalue_df = pd.DataFrame.from_dict(balance_pvalue, orient='index').reset_index()
-
-        # 儲存map table
-        pvalue_df.to_csv(os.path.join(save_path, 'statistic', 'map_table',
-        str(c)+'_'+column_list[c]+'.csv'), index=None, header=['value', 'pvalue'])
+        
+        # 使用numpy儲存
+        array = np.array([list(balance_pvalue.keys()), list(balance_pvalue.values())])
+        np.save(os.path.join(save_path, 'statistic', 'map_table', str(c)+'_'+col+'.npy'), array)
